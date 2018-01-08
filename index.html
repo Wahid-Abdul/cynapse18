@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Agency - Start Bootstrap Theme</title>
+    <title>Cynapse 2018</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +24,111 @@
     <link href="css/agency.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     </script>
+    <style>
+        #days {
+  font-size: 200px;
+  color: #db4844;
+}
+#hours {
+  font-size: 150px;
+  color: #f07c22;
+}
+#minutes {
+  font-size: 100px;
+  color: #f6da74;
+}
+#seconds {
+  font-size: 50px;
+  color: #abcd58;
+}
+
+#countdown{
+	width: 465px;
+	height: 112px;
+	text-align: center;
+	background: transparent;
+	/* background-image: -webkit-linear-gradient(top, #222, #333, #333, #222); 
+	background-image:    -moz-linear-gradient(top, #222, #333, #333, #222);
+	background-image:     -ms-linear-gradient(top, #222, #333, #333, #222);
+	background-image:      -o-linear-gradient(top, #222, #333, #333, #222); */
+	/* border: 1px solid #111; */
+	/* border-radius: 5px; */
+	/* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6); */
+	margin: auto;
+	padding: 24px 0;
+	position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+
+
+#countdown #tiles{
+	position: relative;
+	z-index: 1;
+}
+
+#countdown #tiles > span{
+	width: 92px;
+	max-width: 92px;
+	font: bold 48px 'Droid Sans', Arial, sans-serif;
+	text-align: center;
+	color: whitesmoke;/*font-clock*/
+	background-color: transparent;
+	/* background-image: -webkit-linear-gradient(top, #bbb, #eee); 
+	background-image:    -moz-linear-gradient(top, #bbb, #eee);
+	background-image:     -ms-linear-gradient(top, #bbb, #eee);
+	background-image:      -o-linear-gradient(top, #bbb, #eee); */
+	/* border-top: 1px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7); */
+	margin: 0 7px;
+	padding: 18px 0;
+	display: inline-block;
+	position: relative;
+}
+
+/* #countdown #tiles > span:before{
+	content:"";
+	width: 100%;
+	height: 13px;
+	background: transparent;
+	display: block;
+	padding: 0 3px;
+	position: absolute;
+	top: 41%; left: -3px;
+	z-index: -1;
+} */
+/* 
+#countdown #tiles > span:after{
+	content:"";
+	width: 100%;
+	height: 1px;
+	background: #eee;
+	border-top: 1px solid #333;
+	display: block;
+	position: absolute;
+	top: 48%; left: 0;
+} */
+
+#countdown .labels{
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	position: absolute;
+	bottom: 8px;
+}
+
+#countdown .labels li{
+	width: 102px;
+	font: bold 5em 'Droid Sans', Arial, sans-serif;
+	color: yellow;
+	text-shadow: 1px 1px 0px #000;
+	text-align: center;
+	text-transform: uppercase;
+    display: inline-block;
+    /* border:2px solid red; */
+    margin-top:50px
+}
+    </style>
 </head>
 
 <body id="page-top">
@@ -31,82 +136,58 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-style:normal">Cynapse</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
         </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
+                   
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                    </li>
+                            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                        </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                    </li>
+                            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                    </li>
+                            <a class="nav-link js-scroll-trigger" href="#services">Rules</a>
+                        </li>
+                    
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="masthead">
-        <div class="container">
+    <header class="masthead" style="height:100vh;width:100vw">
+        <div class="container" style="height:100vh;width:100vw">
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome To Our Studio!</div>
-                <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                <div class="intro-heading ">
+                    
+                </div>
+                <div id="countdown" style="margin:auto;width:100%;font-size:0.3em">
+                        
+                        <div class="labels">
+                        <li>Days</li>
+                        <li>Hours</li>
+                        <li>Mins</li>
+                        <li>Secs</li>
+                        </div>
+                        <div id='tiles'></div>  
+                </div>
+                <!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
+                
             </div>
+            
         </div>
     </header>
 
-    <!-- Services -->
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-            </span>
-                    <h4 class="service-heading">E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-            </span>
-                    <h4 class="service-heading">Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-            </span>
-                    <h4 class="service-heading">Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+  
     <!-- Portfolio Grid -->
     <section class="bg-light" id="portfolio">
         <div class="container">
@@ -287,7 +368,7 @@
     </section>
 
     <!-- Team -->
-    <section class="bg-light" id="team">
+    <!-- <section class="bg-light" id="team">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -375,9 +456,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <!-- Clients -->
+    <!-- Clients
     <section class="py-5">
         <div class="container">
             <div class="row">
@@ -403,7 +484,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact -->
     <section id="contact">
@@ -462,7 +543,44 @@
             </div>
         </div>
     </section>
-
+      <!-- Services aka rules -->
+      <section id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-uppercase">RULES</h2>
+                        <h3 class="section-subheading text-muted">rules help control the fun</h3>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                </span>
+                        <h4 class="service-heading">Rule 1</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                </span>
+                        <h4 class="service-heading">Rule 2</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                </span>
+                        <h4 class="service-heading">Rule 3</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -730,6 +848,41 @@
     <script src="js/agency.min.js"></script>
 
 </body>
+<script>
+var target_date = new Date(2018, 1, 12); // set the countdown date
+var days, hours, minutes, seconds; // variables for time units
+
+var countdown = document.getElementById("tiles"); // get tag element
+
+getCountdown();
+
+setInterval(function () { getCountdown(); }, 1000);
+
+function getCountdown(){
+
+	// find the amount of "seconds" between now and target
+	var current_date = new Date().getTime();
+	var seconds_left = (target_date - current_date) / 1000;
+
+	days = pad( parseInt(seconds_left / 86400) );
+	seconds_left = seconds_left % 86400;
+		 
+	hours = pad( parseInt(seconds_left / 3600) );
+	seconds_left = seconds_left % 3600;
+		  
+	minutes = pad( parseInt(seconds_left / 60) );
+	seconds = pad( parseInt( seconds_left % 60 ) );
+
+	// format countdown string + set tag value
+	countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>"; 
+}
+
+function pad(n) {
+	return (n < 10 ? '0' : '') + n;
+}
+
+    
+</script>
 <script>
     $.fn.serializeObject = function() {
         var o = {};
