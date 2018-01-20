@@ -202,7 +202,7 @@
             <div style="height: 100vh; width:100vw; position:relative; z-index:3;">
 
             <h2 style=" padding-top: 80px;font-family: 'Sirin Stencil'; font-size: 50px; position: absolute; margin-top: 350px;color: yellow;border:0px solid yellow;width: 100vw;z-index:3">
-                 CynapSE'18
+                <span id='text'></span>
              </h2>
     
                 <img src="img/clock-gif.gif" alt=""  style="max-width:420px;width: 100vw;height: 100vh;max-height: 420px; margin-top: 290px">
@@ -579,7 +579,7 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button id="submit-form" ></button> class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                                <button id="submit-form"  class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
                                 <span class="popuptext" id="myPopup">A Simple Popup!</span>
                             </div>
                         </div>
@@ -961,6 +961,58 @@ function pad(n) {
             data: $form.serializeObject()
         })
     })
+</script>
+<script>
+    consoleText(['CynapSE 18', 'Feb 12'], 'text',['yellow','lightblue']);
+
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
+
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
+    }
+  }, 120)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
+    }
+  }, 400)
+}
 </script>
 
 </html>
