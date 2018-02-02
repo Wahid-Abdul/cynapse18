@@ -650,7 +650,3 @@ ul.social-buttons {
         text-transform: uppercase;
         display: inline-block;
       }
-      .form-group .form-control {
-        height: auto !important;
-        padding:20px;
-    }

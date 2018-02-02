@@ -23,7 +23,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Bellefair|Joti+One" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="css/agency.css" rel="stylesheet">
+    <link href="css/agency.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     </script>
     <style>
@@ -541,15 +541,15 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="test-form" name="sentMessage" novalidate>
+                    <form id="test-form" name="sentMessage" >
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input class="form-control" id="name" name="Name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.">
+                                    <input class="form-control" id="name" name="Name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name." required>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" id="email" name="Mail" type="text" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
+                                    <input class="form-control" id="email" name="Mail" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
@@ -566,25 +566,20 @@
                                     <input class="form-control" id="college" type="text" name="College" placeholder="Your college *" required data-validation-required-message="Please enter your college name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                <div class="form-group" >
-                                    <select name="Year" style="border-color:transparent;" class="form-control" >
+                                <div class="form-group">
+                                    <select class=" form-control" name="Year" style="height:auto;padding:20px">
                                       <option value="1">First year </option>
-                                      <option value="2" >Second year</option>
-                                      <option value="3" >Pre-final year</option>
-                                      <option value="4" >Final year</option>
+                                      <option value="2">Second year</option>
+                                      <option value="3">Pre-final year</option>
+                                      <option value="4">Final year</option>
                                     </select>
-                                   
+                                    <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
                                 <button id="submit-form"  class="btn btn-primary btn-xl text-uppercase" type="submit" data-toggle="modal" data-target="#largeModal">Submit</button>
-                                
-                                    <!-- <h3>The Large Modal</h3> -->
-                                    <!-- <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Click to open Modal</a> -->
-                                
-                                <!-- <span class="popuptext" id="myPopup">A Simple Popup!</span> -->
                             </div>
                         </div>
                     </form>
@@ -616,7 +611,7 @@
                   <!-- <i class="fa fa-laptop fa-stack-1x fa-inverse"></i> -->
                 </span>
                         <h4 class="service-heading">The formal attire</h4>
-                        <p class="text-muted">Try looking professional with formal dresses just for the one day.Having a little trim will make boys even handsome</p>
+                        <p class="text-muted">Try looking professional with formal dresses just for the one day.Having a little <b>shave</b> will make boys even handsome</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
@@ -636,53 +631,11 @@
                 <a href="https://rmkec.ac.in/cam/routes.html">
                 <button  class="btn btn-primary btn-xl text-uppercase" type="submit">Discover routes</button>
                 </a>
-                    <!-- <h3>The Large Modal</h3> -->
-                    <!-- <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Click to open Modal</a> -->
-                
-                <!-- <span class="popuptext" id="myPopup">A Simple Popup!</span> -->
             </div>
         </section>
-
+        </section>
         
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <!-- <span class="copyright">Copyright &copy; Your Website 2017</span> -->
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li class="list-inline-item">
-                            <a href="#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <!-- <ul class="list-inline quicklinks">
-                        <li class="list-inline-item">
-                            <a href="#">Privacy Policy</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#">Terms of Use</a>
-                        </li>
-                    </ul> -->
-                </div>
-            </div>
-        </div>
-    </footer>
+  
 
     <!-- Portfolio Modals -->
 
@@ -720,46 +673,46 @@
         </div>
     </div>
 
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true"  style="margin-top: 10vh">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
+<!-- Modal 2 -->
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true"  style="margin-top: 10vh">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">.pptx</h2>
-                                <p class="item-intro text-muted">Paper presentation</p>
-                                <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt=""> -->
-                                <!-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate,
-                                    maiores repudiandae, nostrum, reiciendis facere nemo!</p> -->
-                                <p>Come and unleash your innovativeness!! </p>    
-                                <ul class="list-inline">
-                                    <li><strong> Some hot topics.. </strong></li>
-                                    <li>Artificial Intelligence</li>
-                                    <li>Big Data</li>
-                                    <li>Cloud computing</li>
-                                    <li>Internet Of Things</li>
-                                    <!-- <li>Category: Graphic Design</li> -->
-                                </ul>
-                                <span>Mail us the papers at: <b>cynapse2k18@gmail.com</b></span> <br>
-                                <i><span>before <b>10th febraury 2018</b></span></i> <br> <br>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close </button>
-                            </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2 class="text-uppercase">.pptx</h2>
+                            <p class="item-intro text-muted">Paper presentation</p>
+                            <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt=""> -->
+                            <!-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate,
+                                maiores repudiandae, nostrum, reiciendis facere nemo!</p> -->
+                            <p>Come and unleash your innovativeness!! </p>    
+                            <ul class="list-inline">
+                                <li><strong> Some hot topics.. </strong></li>
+                                <li>Artificial Intelligence</li>
+                                <li>Big Data</li>
+                                <li>Cloud computing</li>
+                                <li>Internet Of Things</li>
+                                <!-- <li>Category: Graphic Design</li> -->
+                            </ul>
+                            <span>Mail us the papers at: <b>cynapse2k18@gmail.com</b></span> <br>
+                            <i><span>before <b>10th febraury 2018</b></span></i> <br> <br>
+                            <button class="btn btn-primary" data-dismiss="modal" type="button">
+                <i class="fa fa-times"></i>
+                Close </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Modal 3 -->
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true"  style="margin-top: 10vh">
@@ -898,24 +851,25 @@
         </div>
     </div>   -->
     
-
-<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <!-- <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
-        </div> -->
-        <div class="modal-body">
-          <h3>Thank you for registering !!</h3>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          
+    <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
+            </div> -->
+            <div class="modal-body">
+              <h3>Thank you for registering !!</h3>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    
+
 
 
     <!-- Bootstrap core JavaScript -->
