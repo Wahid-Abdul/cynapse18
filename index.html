@@ -155,6 +155,18 @@
     /* border:2px solid red; */
     margin-top:50px
 }
+::-webkit-placeholder {
+        color: red;
+        opacity: 1; /* Firefox */
+    }
+    
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color: red;
+    }
+    
+    ::-ms-input-placeholder { /* Microsoft Edge */
+       color: red;
+    }
     </style>
 </head>
 
@@ -545,7 +557,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input class="form-control" id="name" name="Name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name." required>
+                                    <input class="form-control" id="name" name="Name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name." >
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
@@ -553,13 +565,13 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" id="phone" name="Phone" type="text" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
+                                    <input class="form-control" id="phone" name="Phone" type="text" placeholder="Your Phone " required data-validation-required-message="Please enter your phone number.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input class="form-control" id="regnNumber" type="text" name="RegNumber" placeholder="Your Register Number *" required data-validation-required-message="Please enter your register number.">
+                                    <input class="form-control" id="regnNumber" type="text" name="RegNumber" placeholder="Your Register Number " required data-validation-required-message="Please enter your register number.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
@@ -579,7 +591,7 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button id="submit-form"  class="btn btn-primary btn-xl text-uppercase" type="submit" data-toggle="modal" data-target="#largeModal">Submit</button>
+                                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" data-toggle="modal" >Submit</button>
                             </div>
                         </div>
                     </form>
@@ -868,6 +880,155 @@
           </div>
         </div>
       </div>
+
+
+      <div class="modal fade" id="alert1" tabindex="-1" role="dialog" aria-labelledby="alert1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <!-- <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
+                </div> -->
+                <div class="modal-body">
+                  <h3>You entered an invalid email ID</h3>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="alert2" tabindex="-1" role="dialog" aria-labelledby="alert2" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <!-- <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
+                    </div> -->
+                    <div class="modal-body">
+                      <h3>Please fill the name field</h3>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="modal fade" id="alert3" tabindex="-1" role="dialog" aria-labelledby="alert3" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <!-- <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
+                        </div> -->
+                        <div class="modal-body">
+                          <h3>Please enter your college name</h3>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="modal fade" id="alert4" tabindex="-1" role="dialog" aria-labelledby="alert4" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <!-- <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                              <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
+                            </div> -->
+                            <div class="modal-body">
+                              <h3>Check the following</h3>
+                              <ul>
+                                  <li>Invalid email </li>
+                                  <li>Empty name field</li>
+                              </ul>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="modal fade" id="alert5" tabindex="-1" role="dialog" aria-labelledby="alert5" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                              <div class="modal-content">
+                                <!-- <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                  <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
+                                </div> -->
+                                <div class="modal-body">
+                                  <h3>Check the following</h3>
+                                  <ul>
+                                      <li>Invalid email </li>
+                                      <li>Empty college name </li>
+                                  </ul>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+    
+
+                      <div class="modal fade" id="alert6" tabindex="-1" role="dialog" aria-labelledby="alert6" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                              <div class="modal-content">
+                                <!-- <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                  <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
+                                </div> -->
+                                <div class="modal-body">
+                                  <h3>Please check the following</h3>
+                                  <ul>
+                                      <li>Empty name field</li>
+                                      <li>Empty college name</li>
+                                  </ul>
+
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="modal fade" id="alert7" tabindex="-1" role="dialog" aria-labelledby="alert7" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <!-- <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                      <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
+                                    </div> -->
+                                    <div class="modal-body">
+                                      <h3>Please check the following</h3>
+                                      <ul>
+                                          <li>Invalid mail ID</li>
+                                          <li>Empty name field</li>
+                                          <li>Empty college name</li>
+                                      </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
     
 
 
@@ -923,6 +1084,7 @@ function pad(n) {
     
 </script>
 <script>
+
     $.fn.serializeObject = function() {
         var o = {};
         var a = this.serializeArray();
@@ -942,15 +1104,62 @@ function pad(n) {
     var $form = $('form#test-form'),
         url = 'https://script.google.com/macros/s/AKfycbxuWXV9qJj9U0TQ8767TEfyz-LCaXcRgIaRF1HMfya52yIH7WPm/exec'
 
-    $('#submit-form').on('click', function(e) {
-        e.preventDefault();
-        var jqxhr = $.ajax({
-            url: url,
-            method: "GET",
-            dataType: "json",
-            data: $form.serializeObject()
-        })
-        document.getElementById("test-form").reset();
+    $('#sendMessageButton').on('click', function(e) { 
+        // $('#largeModal').modal('show'); 
+        var _mail = document.getElementById("email").value
+        var _name = document.getElementById("name").value
+        var _college = document.getElementById("college").value
+        var  _mail2 = false
+     
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(_mail))
+        {
+            console.log("correct mail")
+            _mail2 = true
+        }
+        
+        if(_mail2 == false && _college == "" && _name == "")
+        {
+            $('#alert7').modal('show'); 
+            console.log("3 invalid values")
+        }
+        else if(_name == "" &&  _college == "")
+        {
+            $('#alert6').modal('show'); 
+        } 
+        else if (_mail2 == false && _college == "")
+        {
+            $('#alert5').modal('show'); 
+        }
+        else if(_mail2 == false && _name == "")
+        {
+            $('#alert4').modal('show'); 
+        }
+        else if(_college == "")
+        {
+            $('#alert3').modal('show'); 
+        }
+        else if(_name == "")
+        {   
+            $('#alert2').modal('show');
+        }
+        else if (_mail2 == false)
+        {
+            $('#alert1').modal('show'); 
+        }
+        else
+        {
+            $('#largeModal').modal('show')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+            e.preventDefault();
+        
+
+            var jqxhr = $.ajax({
+                url: url,
+                method: "GET",
+                dataType: "json",
+                data: $form.serializeObject()
+            })
+            document.getElementById("test-form").reset();
+        }
     })
 </script>
 <script>
@@ -994,11 +1203,11 @@ function consoleText(words, id, colors) {
   }, 120)
   window.setInterval(function() {
     if (visible === true) {
-      con.className = 'console-underscore hidden'
+    //   con.className = 'console-underscore hidden'
       visible = false;
 
     } else {
-      con.className = 'console-underscore'
+    //   con.className = 'console-underscore'
 
       visible = true;
     }
