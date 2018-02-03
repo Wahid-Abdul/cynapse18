@@ -25,95 +25,100 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     </script>
     <style>
         .portfolio-modal .close-modal .lr .rl {
-    z-index: 1052;
-    width: 1px;
-    height: 25px;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-color: #212529;
-}
-
-.portfolio-modal .close-modal .lr {
-    z-index: 1052;
-    width: 1px;
-    height: 25px;
-   
-    background-color: #212529;
-}
+            z-index: 1052;
+            width: 1px;
+            height: 25px;
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            background-color: #212529;
+        }
+        
+        .portfolio-modal .close-modal .lr {
+            z-index: 1052;
+            width: 1px;
+            height: 25px;
+            background-color: #212529;
+        }
     </style>
 
 
 
 
-   
+
 
     <style>
         #days {
-  font-size: 200px;
-  color: #db4844;
-}
-#hours {
-  font-size: 150px;
-  color: #f07c22;
-}
-#minutes {
-  font-size: 100px;
-  color: #f6da74;
-}
-#seconds {
-  font-size: 50px;
-  color: #abcd58;
-}
-
-#countdown{
-	width: 465px;
-	height: 112px;
-	text-align: center;
-	background: transparent;
-	/* background-image: -webkit-linear-gradient(top, #222, #333, #333, #222); 
+            font-size: 200px;
+            color: #db4844;
+        }
+        
+        #hours {
+            font-size: 150px;
+            color: #f07c22;
+        }
+        
+        #minutes {
+            font-size: 100px;
+            color: #f6da74;
+        }
+        
+        #seconds {
+            font-size: 50px;
+            color: #abcd58;
+        }
+        
+        #countdown {
+            width: 465px;
+            height: 112px;
+            text-align: center;
+            background: transparent;
+            /* background-image: -webkit-linear-gradient(top, #222, #333, #333, #222); 
 	background-image:    -moz-linear-gradient(top, #222, #333, #333, #222);
 	background-image:     -ms-linear-gradient(top, #222, #333, #333, #222);
 	background-image:      -o-linear-gradient(top, #222, #333, #333, #222); */
-	/* border: 1px solid #111; */
-	/* border-radius: 5px; */
-	/* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6); */
-	margin: auto;
-	padding: 24px 0;
-	position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
-}
-
-
-#countdown #tiles{
-	position: relative;
-	z-index: 1;
-}
-
-#countdown #tiles > span{
-	width: 92px;
-	max-width: 92px;
-	font: bold 48px 'Droid Sans', Arial, sans-serif;
-	text-align: center;
-	color: whitesmoke;/*font-clock*/
-	background-color: transparent;
-	/* background-image: -webkit-linear-gradient(top, #bbb, #eee); 
+            /* border: 1px solid #111; */
+            /* border-radius: 5px; */
+            /* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6); */
+            margin: auto;
+            padding: 24px 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        #countdown #tiles {
+            position: relative;
+            z-index: 1;
+        }
+        
+        #countdown #tiles>span {
+            width: 92px;
+            max-width: 92px;
+            font: bold 48px 'Droid Sans', Arial, sans-serif;
+            text-align: center;
+            color: whitesmoke;
+            /*font-clock*/
+            background-color: transparent;
+            /* background-image: -webkit-linear-gradient(top, #bbb, #eee); 
 	background-image:    -moz-linear-gradient(top, #bbb, #eee);
 	background-image:     -ms-linear-gradient(top, #bbb, #eee);
 	background-image:      -o-linear-gradient(top, #bbb, #eee); */
-	/* border-top: 1px solid #fff;
+            /* border-top: 1px solid #fff;
 	border-radius: 3px;
 	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7); */
-	margin: 0 7px;
-	padding: 18px 0;
-	display: inline-block;
-	position: relative;
-}
-
-/* #countdown #tiles > span:before{
+            margin: 0 7px;
+            padding: 18px 0;
+            display: inline-block;
+            position: relative;
+        }
+        /* #countdown #tiles > span:before{
 	content:"";
 	width: 100%;
 	height: 13px;
@@ -124,7 +129,7 @@
 	top: 41%; left: -3px;
 	z-index: -1;
 } */
-/* 
+        /* 
 #countdown #tiles > span:after{
 	content:"";
 	width: 100%;
@@ -135,38 +140,42 @@
 	position: absolute;
 	top: 48%; left: 0;
 } */
-
-#countdown .labels{
-	width: 100%;
-	height: 60px;
-	text-align: center;
-	position: absolute;
-	bottom: 8px;
-}
-
-#countdown .labels li{
-	width: 102px;
-	font: bold 5em 'Droid Sans', Arial, sans-serif;
-	color: yellow;
-	text-shadow: 1px 1px 0px #000;
-	text-align: center;
-	text-transform: uppercase;
-    display: inline-block;
-    /* border:2px solid red; */
-    margin-top:50px
-}
-::-webkit-placeholder {
-        color: red;
-        opacity: 1; /* Firefox */
-    }
-    
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
-       color: red;
-    }
-    
-    ::-ms-input-placeholder { /* Microsoft Edge */
-       color: red;
-    }
+        
+        #countdown .labels {
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            position: absolute;
+            bottom: 8px;
+        }
+        
+        #countdown .labels li {
+            width: 102px;
+            font: bold 5em 'Droid Sans', Arial, sans-serif;
+            color: yellow;
+            text-shadow: 1px 1px 0px #000;
+            text-align: center;
+            text-transform: uppercase;
+            display: inline-block;
+            /* border:2px solid red; */
+            margin-top: 50px
+        }
+        
+         ::-webkit-placeholder {
+            color: red;
+            opacity: 1;
+            /* Firefox */
+        }
+        
+         :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: red;
+        }
+        
+         ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: red;
+        }
     </style>
 </head>
 
@@ -175,7 +184,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-style:normal;font-family:'Sirin Stencil';"    >RMK Engineering College</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-style:normal;font-family:'Sirin Stencil';">RMK Engineering College</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -183,24 +192,24 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
 
                 <ul class="navbar-nav text-uppercase ml-auto">
-                   
+
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#portfolio">Events</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#contact">Register</a>
+                        <a class="nav-link js-scroll-trigger" href="#contact">Register</a>
                     </li>
                     <li class="nav-item">
-                                   <a class="nav-link js-scroll-trigger" href="#services">Rules</a>
+                        <a class="nav-link js-scroll-trigger" href="#services">Rules</a>
                     </li>
-                    
+
                     <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#register">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="#register">Contact</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -209,38 +218,38 @@
     <!-- Header -->
     <header class="masthead" style="min-height:100vh;max-height: 120vh  ;width:100vw">
 
-                <!-- <h2 style="padding-top: 15vh;position: absolute;width: 100vw;margin-top: 10px;font-size: 5em;font-family: 'Patrick Hand SC'">Cynapse 2K18</h2> -->
+        <!-- <h2 style="padding-top: 15vh;position: absolute;width: 100vw;margin-top: 10px;font-size: 5em;font-family: 'Patrick Hand SC'">Cynapse 2K18</h2> -->
 
-            <div style="height: 100vh; width:100vw; position:relative; z-index:3;">
+        <div style="height: 100vh; width:100vw; position:relative; z-index:3;">
 
             <h2 style=" padding-top: 80px;font-family: 'Sirin Stencil'; font-size: 50px; position: absolute; margin-top: 350px;color: yellow;border:0px solid yellow;width: 100vw;z-index:3">
                 <span id='text'></span>
-             </h2>
-    
-                <img src="img/clock-gif.gif" alt=""  style="max-width:420px;width: 100vw;height: 100vh;max-height: 420px; margin-top: 290px">
-            </div>    
+            </h2>
+
+            <img src="img/clock-gif.gif" alt="" style="max-width:420px;width: 100vw;height: 100vh;max-height: 420px; margin-top: 290px">
+        </div>
         <div class="container" style="height:100vh;width:100vw">
             <div class="intro-text">
                 <div class="intro-lead-in"></div>
                 <div class="intro-heading ">
-                    
+
                 </div>
                 <div id="countdown" style="margin:90px auto;width:100%;font-size:0.3em; border:0px solid blue">
-                        
-                        <div class="labels">
+
+                    <div class="labels">
                         <li>Days</li>
                         <li>Hours</li>
                         <li>Mins</li>
                         <li>Secs</li>
-                        
-                        </div>
-                        <div id='tiles'> </div>  
+
+                    </div>
+                    <div id='tiles'> </div>
                 </div>
-               
+
                 <!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
-                
+
             </div>
-            
+
         </div>
     </header>
 
@@ -396,7 +405,7 @@
                                 </div>
                             </div>
                         </li>
-                       <!--  <li class="timeline-inverted">
+                        <!--  <li class="timeline-inverted">
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
                             </div>
@@ -548,16 +557,16 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">Register</h2>
-                    <h3 class="section-subheading text-muted" >invite yoursel</h3>
+                    <h3 class="section-subheading text-muted">invite yoursel</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="test-form" name="sentMessage" >
+                    <form id="test-form" name="sentMessage">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input class="form-control" id="name" name="Name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name." >
+                                    <input class="form-control" id="name" name="Name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
@@ -591,7 +600,7 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" data-toggle="modal" >Submit</button>
+                                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" data-toggle="modal">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -599,55 +608,87 @@
             </div>
         </div>
     </section>
-      <!-- Services aka rules -->
-      <section id="services">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-uppercase">RULES</h2>
-                        <h3 class="section-subheading text-muted">rules help control the fun</h3>
-                    </div>
+    <!-- Services aka rules -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">RULES</h2>
+                    <h3 class="section-subheading text-muted">rules help control the fun</h3>
                 </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
                          <i class="fa fa-phone  fa-stack-2x text-primary"></i>
                 </span>
-                        <h4 class="service-heading">Mobile phones</h4>
-                        <p class="text-muted">Mobile phones make the world a smaller place but distant our friends even more.Lets keep them away for just a day.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
+                    <h4 class="service-heading">Mobile phones</h4>
+                    <p class="text-muted">Mobile phones make the world a smaller place but distant our friends even more.Lets keep them away for just a day.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
                                 <!-- <i class="fa fa-cog fa-spin fa-3x fa-fw"></i> -->
                   <i class="fa fa-mortar-board fa-stack-2x text-primary"></i>
                   <!-- <i class="fa fa-laptop fa-stack-1x fa-inverse"></i> -->
                 </span>
-                        <h4 class="service-heading">The formal attire</h4>
-                        <p class="text-muted">Try looking professional with formal dresses just for the one day.Having a little <b>shave</b> will make boys even handsome</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
+                    <h4 class="service-heading">The formal attire</h4>
+                    <p class="text-muted">Try looking professional with formal dresses just for the one day.Having a little <b>shave</b> will make boys even handsome</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
                   <i class="fa fa-bus fa-stack-2x text-primary"></i>
                   <!-- <i class="fa fa-lock fa-stack-1x fa-inverse"></i> -->
                 </span>
-                        <h4 class="service-heading">The bus ride</h4>
-                        <p class="text-muted">Our college buses are available from almost every corner of the city. Join us for a free ride. </p>
-                    </div>
+                    <h4 class="service-heading">The bus ride</h4>
+                    <p class="text-muted">Our college buses are available from almost every corner of the city. Join us for a free ride. </p>
                 </div>
             </div>
-        </section>
-        <section id="register">
-                
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d970.4749482833574!2d80.1418538!3d13.3565066!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x11cc13e2927bfabc!2sRMK+ENGINEERING+COLLEGE!5e0!3m2!1sen!2sin!4v1444405653659" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-            <div class="col-lg-12 text-center">
-                <a href="https://rmkec.ac.in/cam/routes.html">
-                <button  class="btn btn-primary btn-xl text-uppercase" type="submit">Discover routes</button>
-                </a>
+        </div>
+    </section>
+    <section id="register" style="height: 100vh">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d970.4749482833574!2d80.1418538!3d13.3565066!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x11cc13e2927bfabc!2sRMK+ENGINEERING+COLLEGE!5e0!3m2!1sen!2sin!4v1444405653659" width="100%" height="450"
+            frameborder="0" style="border:3" allowfullscreen=""></iframe>
+        <br><br>
+        <div class="col-lg-12 text-center">
+            <a href="https://rmkec.ac.in/cam/routes.html">
+                <button class="btn btn-primary btn-xl text-uppercase" type="submit">Discover routes</button>
+            </a>
+        </div>
+    </section>
+    </section>
+    <footer id="foot">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright" id="phoneContent">8939545687</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li></li>
+                        <li class="list-inline-item" id="phoneIcon">
+                            <a href="#foot">
+                                <i class="fa fa-phone"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item" id="mailIcon">
+                            <a href="#foot">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks" id="mailContent">
+                        <li>cynapse2k18@gmail.com</li>
+                    </ul>
+                </div>
             </div>
-        </section>
-        </section>
-        
-  
+        </div>
+    </footer>
+
+
 
     <!-- Portfolio Modals -->
 
@@ -671,8 +712,8 @@
                                 <!-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate,
                                     maiores repudiandae, nostrum, reiciendis facere nemo!</p> -->
                                 <ul class="list-inline">
-                                      <li>  Round 1 - MCQ, test of fundamentals</li>
-                                      <li> Round 2 –The programming test</li>                                        
+                                    <li> Round 1 - MCQ, test of fundamentals</li>
+                                    <li> Round 2 –The programming test</li>
                                 </ul>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
@@ -685,49 +726,49 @@
         </div>
     </div>
 
-<!-- Modal 2 -->
-<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true"  style="margin-top: 10vh">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl"></div>
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="margin-top: 10vh">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2 class="text-uppercase">.pptx</h2>
-                            <p class="item-intro text-muted">Paper presentation</p>
-                            <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt=""> -->
-                            <!-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate,
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">.pptx</h2>
+                                <p class="item-intro text-muted">Paper presentation</p>
+                                <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt=""> -->
+                                <!-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate,
                                 maiores repudiandae, nostrum, reiciendis facere nemo!</p> -->
-                            <p>Come and unleash your innovativeness!! </p>    
-                            <ul class="list-inline">
-                                <li><strong> Some hot topics.. </strong></li>
-                                <li>Artificial Intelligence</li>
-                                <li>Big Data</li>
-                                <li>Cloud computing</li>
-                                <li>Internet Of Things</li>
-                                <!-- <li>Category: Graphic Design</li> -->
-                            </ul>
-                            <span>Mail us the papers at: <b>cynapse2k18@gmail.com</b></span> <br>
-                            <i><span>before <b>10th febraury 2018</b></span></i> <br> <br>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                <p>Come and unleash your innovativeness!! </p>
+                                <ul class="list-inline">
+                                    <li><strong> Some hot topics.. </strong></li>
+                                    <li>Artificial Intelligence</li>
+                                    <li>Big Data</li>
+                                    <li>Cloud computing</li>
+                                    <li>Internet Of Things</li>
+                                    <!-- <li>Category: Graphic Design</li> -->
+                                </ul>
+                                <span>Mail us the papers at: <b>cynapse2k18@gmail.com</b></span> <br>
+                                <i><span>before <b>10th febraury 2018</b></span></i> <br> <br>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
                 <i class="fa fa-times"></i>
                 Close </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true"  style="margin-top: 10vh">
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true" style="margin-top: 10vh">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -747,7 +788,7 @@
                                     maiores repudiandae, nostrum, reiciendis facere nemo!</p> -->
                                 <ul class="list-inline">
                                     <li>Round 1 – MCQ, spot the bugs</li>
-                                            <li>Round 2 –Reverse Coding</li>
+                                    <li>Round 2 –Reverse Coding</li>
                                 </ul>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
@@ -761,7 +802,7 @@
     </div>
 
     <!-- Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true"  style="margin-top: 10vh">
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true" style="margin-top: 10vh">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -794,7 +835,7 @@
     </div>
 
     <!-- Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true"  style="margin-top: 10vh">
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true" style="margin-top: 10vh">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -815,7 +856,7 @@
                                 <ul class="list-inline">
                                     <li>Round 1: Know how its connected </li>
                                     <li>Round 2: surprise.. surprise</li>
-                                    
+
                                 </ul>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
@@ -862,174 +903,174 @@
             </div>
         </div>
     </div>   -->
-    
+
     <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
         <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <!-- <div class="modal-header">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
             </div> -->
-            <div class="modal-body">
-              <h3>Thank you for registering !!</h3>
+                <div class="modal-body">
+                    <h3>Thank you for registering !!</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
 
-      <div class="modal fade" id="alert1" tabindex="-1" role="dialog" aria-labelledby="alert1" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
+    <div class="modal fade" id="alert1" tabindex="-1" role="dialog" aria-labelledby="alert1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
                 <!-- <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                   <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
                 </div> -->
                 <div class="modal-body">
-                  <h3>You entered an invalid email ID</h3>
+                    <h3>You entered an invalid email ID</h3>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-          <div class="modal fade" id="alert2" tabindex="-1" role="dialog" aria-labelledby="alert2" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <!-- <div class="modal-header">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="alert2" tabindex="-1" role="dialog" aria-labelledby="alert2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                       <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
                     </div> -->
-                    <div class="modal-body">
-                      <h3>Please fill the name field</h3>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      
-                    </div>
-                  </div>
+                <div class="modal-body">
+                    <h3>Please fill the name field</h3>
                 </div>
-              </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-              <div class="modal fade" id="alert3" tabindex="-1" role="dialog" aria-labelledby="alert3" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                      <div class="modal-content">
-                        <!-- <div class="modal-header">
+    <div class="modal fade" id="alert3" tabindex="-1" role="dialog" aria-labelledby="alert3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                           <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
                         </div> -->
-                        <div class="modal-body">
-                          <h3>Please enter your college name</h3>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="modal-body">
+                    <h3>Please enter your college name</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-                  <div class="modal fade" id="alert4" tabindex="-1" role="dialog" aria-labelledby="alert4" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                            <!-- <div class="modal-header">
+    <div class="modal fade" id="alert4" tabindex="-1" role="dialog" aria-labelledby="alert4" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
                               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                               <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
                             </div> -->
-                            <div class="modal-body">
-                              <h3>Check the following</h3>
-                              <ul>
-                                  <li>Invalid email </li>
-                                  <li>Empty name field</li>
-                              </ul>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                              
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                <div class="modal-body">
+                    <h3>Check the following</h3>
+                    <ul>
+                        <li>Invalid email </li>
+                        <li>Empty name field</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-                      <div class="modal fade" id="alert5" tabindex="-1" role="dialog" aria-labelledby="alert5" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                              <div class="modal-content">
-                                <!-- <div class="modal-header">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="alert5" tabindex="-1" role="dialog" aria-labelledby="alert5" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
                                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                   <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
                                 </div> -->
-                                <div class="modal-body">
-                                  <h3>Check the following</h3>
-                                  <ul>
-                                      <li>Invalid email </li>
-                                      <li>Empty college name </li>
-                                  </ul>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                  
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-    
+                <div class="modal-body">
+                    <h3>Check the following</h3>
+                    <ul>
+                        <li>Invalid email </li>
+                        <li>Empty college name </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-                      <div class="modal fade" id="alert6" tabindex="-1" role="dialog" aria-labelledby="alert6" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                              <div class="modal-content">
-                                <!-- <div class="modal-header">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="alert6" tabindex="-1" role="dialog" aria-labelledby="alert6" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
                                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                   <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
                                 </div> -->
-                                <div class="modal-body">
-                                  <h3>Please check the following</h3>
-                                  <ul>
-                                      <li>Empty name field</li>
-                                      <li>Empty college name</li>
-                                  </ul>
+                <div class="modal-body">
+                    <h3>Please check the following</h3>
+                    <ul>
+                        <li>Empty name field</li>
+                        <li>Empty college name</li>
+                    </ul>
 
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                  
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-                          <div class="modal fade" id="alert7" tabindex="-1" role="dialog" aria-labelledby="alert7" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                  <div class="modal-content">
-                                    <!-- <div class="modal-header">
+    <div class="modal fade" id="alert7" tabindex="-1" role="dialog" aria-labelledby="alert7" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
                                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                       <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
                                     </div> -->
-                                    <div class="modal-body">
-                                      <h3>Please check the following</h3>
-                                      <ul>
-                                          <li>Invalid mail ID</li>
-                                          <li>Empty name field</li>
-                                          <li>Empty college name</li>
-                                      </ul>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                      
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-    
+                <div class="modal-body">
+                    <h3>Please check the following</h3>
+                    <ul>
+                        <li>Invalid mail ID</li>
+                        <li>Empty name field</li>
+                        <li>Empty college name</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 
@@ -1049,42 +1090,41 @@
 
 </body>
 <script>
-var target_date = new Date(2018, 1, 12); // set the countdown date
-var days, hours, minutes, seconds; // variables for time units
+    var target_date = new Date(2018, 1, 12); // set the countdown date
+    var days, hours, minutes, seconds; // variables for time units
 
-var countdown = document.getElementById("tiles"); // get tag element
+    var countdown = document.getElementById("tiles"); // get tag element
 
-getCountdown();
+    getCountdown();
 
-setInterval(function () { getCountdown(); }, 1000);
+    setInterval(function() {
+        getCountdown();
+    }, 1000);
 
-function getCountdown(){
+    function getCountdown() {
 
-	// find the amount of "seconds" between now and target
-	var current_date = new Date().getTime();
-	var seconds_left = (target_date - current_date) / 1000;
+        // find the amount of "seconds" between now and target
+        var current_date = new Date().getTime();
+        var seconds_left = (target_date - current_date) / 1000;
 
-	days = pad( parseInt(seconds_left / 86400) );
-	seconds_left = seconds_left % 86400;
-		 
-	hours = pad( parseInt(seconds_left / 3600) );
-	seconds_left = seconds_left % 3600;
-		  
-	minutes = pad( parseInt(seconds_left / 60) );
-	seconds = pad( parseInt( seconds_left % 60 ) );
+        days = pad(parseInt(seconds_left / 86400));
+        seconds_left = seconds_left % 86400;
 
-	// format countdown string + set tag value
-	countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>"; 
-}
+        hours = pad(parseInt(seconds_left / 3600));
+        seconds_left = seconds_left % 3600;
 
-function pad(n) {
-	return (n < 10 ? '0' : '') + n;
-}
+        minutes = pad(parseInt(seconds_left / 60));
+        seconds = pad(parseInt(seconds_left % 60));
 
-    
+        // format countdown string + set tag value
+        countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
+    }
+
+    function pad(n) {
+        return (n < 10 ? '0' : '') + n;
+    }
 </script>
 <script>
-
     $.fn.serializeObject = function() {
         var o = {};
         var a = this.serializeArray();
@@ -1104,53 +1144,37 @@ function pad(n) {
     var $form = $('form#test-form'),
         url = 'https://script.google.com/macros/s/AKfycbxuWXV9qJj9U0TQ8767TEfyz-LCaXcRgIaRF1HMfya52yIH7WPm/exec'
 
-    $('#sendMessageButton').on('click', function(e) { 
+    $('#sendMessageButton').on('click', function(e) {
         // $('#largeModal').modal('show'); 
         var _mail = document.getElementById("email").value
         var _name = document.getElementById("name").value
         var _college = document.getElementById("college").value
-        var  _mail2 = false
-     
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(_mail))
-        {
+        var _mail2 = false
+
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(_mail)) {
             console.log("correct mail")
             _mail2 = true
         }
-        
-        if(_mail2 == false && _college == "" && _name == "")
-        {
-            $('#alert7').modal('show'); 
+
+        if (_mail2 == false && _college == "" && _name == "") {
+            $('#alert7').modal('show');
             console.log("3 invalid values")
-        }
-        else if(_name == "" &&  _college == "")
-        {
-            $('#alert6').modal('show'); 
-        } 
-        else if (_mail2 == false && _college == "")
-        {
-            $('#alert5').modal('show'); 
-        }
-        else if(_mail2 == false && _name == "")
-        {
-            $('#alert4').modal('show'); 
-        }
-        else if(_college == "")
-        {
-            $('#alert3').modal('show'); 
-        }
-        else if(_name == "")
-        {   
+        } else if (_name == "" && _college == "") {
+            $('#alert6').modal('show');
+        } else if (_mail2 == false && _college == "") {
+            $('#alert5').modal('show');
+        } else if (_mail2 == false && _name == "") {
+            $('#alert4').modal('show');
+        } else if (_college == "") {
+            $('#alert3').modal('show');
+        } else if (_name == "") {
             $('#alert2').modal('show');
-        }
-        else if (_mail2 == false)
-        {
-            $('#alert1').modal('show'); 
-        }
-        else
-        {
-            $('#largeModal').modal('show')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        } else if (_mail2 == false) {
+            $('#alert1').modal('show');
+        } else {
+            $('#largeModal').modal('show')
             e.preventDefault();
-        
+
 
             var jqxhr = $.ajax({
                 url: url,
@@ -1161,58 +1185,65 @@ function pad(n) {
             document.getElementById("test-form").reset();
         }
     })
+
+    $("#phoneIcon").click(function() {
+        $("#phoneContent").toggle("slide");
+    });
+    $("#mailIcon").click(function() {
+        $("#mailContent").toggle("slide");
+    });
 </script>
 <script>
-    consoleText(['CynapSE 18', 'Feb 12'], 'text',['yellow','lightblue']);
+    consoleText(['CynapSE 18', 'Feb 12'], 'text', ['yellow', 'lightblue']);
 
-function consoleText(words, id, colors) {
-  if (colors === undefined) colors = ['#fff'];
-  var visible = true;
-  var con = document.getElementById('console');
-  var letterCount = 1;
-  var x = 1;
-  var waiting = false;
-  var target = document.getElementById(id)
-  target.setAttribute('style', 'color:' + colors[0])
-  window.setInterval(function() {
-
-    if (letterCount === 0 && waiting === false) {
-      waiting = true;
-      target.innerHTML = words[0].substring(0, letterCount)
-      window.setTimeout(function() {
-        var usedColor = colors.shift();
-        colors.push(usedColor);
-        var usedWord = words.shift();
-        words.push(usedWord);
-        x = 1;
+    function consoleText(words, id, colors) {
+        if (colors === undefined) colors = ['#fff'];
+        var visible = true;
+        var con = document.getElementById('console');
+        var letterCount = 1;
+        var x = 1;
+        var waiting = false;
+        var target = document.getElementById(id)
         target.setAttribute('style', 'color:' + colors[0])
-        letterCount += x;
-        waiting = false;
-      }, 1000)
-    } else if (letterCount === words[0].length + 1 && waiting === false) {
-      waiting = true;
-      window.setTimeout(function() {
-        x = -1;
-        letterCount += x;
-        waiting = false;
-      }, 1000)
-    } else if (waiting === false) {
-      target.innerHTML = words[0].substring(0, letterCount)
-      letterCount += x;
-    }
-  }, 120)
-  window.setInterval(function() {
-    if (visible === true) {
-    //   con.className = 'console-underscore hidden'
-      visible = false;
+        window.setInterval(function() {
 
-    } else {
-    //   con.className = 'console-underscore'
+            if (letterCount === 0 && waiting === false) {
+                waiting = true;
+                target.innerHTML = words[0].substring(0, letterCount)
+                window.setTimeout(function() {
+                    var usedColor = colors.shift();
+                    colors.push(usedColor);
+                    var usedWord = words.shift();
+                    words.push(usedWord);
+                    x = 1;
+                    target.setAttribute('style', 'color:' + colors[0])
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (letterCount === words[0].length + 1 && waiting === false) {
+                waiting = true;
+                window.setTimeout(function() {
+                    x = -1;
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (waiting === false) {
+                target.innerHTML = words[0].substring(0, letterCount)
+                letterCount += x;
+            }
+        }, 120)
+        window.setInterval(function() {
+            if (visible === true) {
+                //   con.className = 'console-underscore hidden'
+                visible = false;
 
-      visible = true;
+            } else {
+                //   con.className = 'console-underscore'
+
+                visible = true;
+            }
+        }, 400)
     }
-  }, 400)
-}
 </script>
 
 </html>
