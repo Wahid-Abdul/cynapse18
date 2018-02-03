@@ -28,6 +28,70 @@
     <!-- <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     </script>
     <style>
+        /* ---- reset ---- */
+        
+        canvas {
+            display: block;
+            vertical-align: bottom;
+        }
+        /* ---- particles.js container ---- */
+        
+        .masthead {
+            position: relative;
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            min-height: 100vh;
+            max-height: 120vh;
+            width: 100vw;
+        }
+        /* ---- stats.js ---- */
+        
+        .count-particles {
+            background: #000022;
+            position: absolute;
+            top: 48px;
+            left: 0;
+            width: 80px;
+            color: #13E8E9;
+            font-size: .8em;
+            text-align: left;
+            text-indent: 4px;
+            line-height: 14px;
+            padding-bottom: 2px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+        }
+        
+        .js-count-particles {
+            font-size: 1.1em;
+        }
+        
+        #stats,
+        .count-particles {
+            -webkit-user-select: none;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        
+        #stats {
+            border-radius: 3px 3px 0 0;
+            overflow: hidden;
+        }
+        
+        .count-particles {
+            border-radius: 0 0 3px 3px;
+        }
+    </style>
+    <style>
         .portfolio-modal .close-modal .lr .rl {
             z-index: 1052;
             width: 1px;
@@ -217,12 +281,12 @@
 
     <!-- Header -->
     <header class="masthead" style="min-height:100vh;max-height: 120vh;width:100vw">
-
+        <div id="particles-js"></div>
         <!-- <h2 style="padding-top: 15vh;position: absolute;width: 100vw;margin-top: 10px;font-size: 5em;font-family: 'Patrick Hand SC'">Cynapse 2K18</h2> -->
 
         <div style="height: 100vh; width:100vw; position:relative; z-index:3;">
 
-            <h2 style=" padding-top: 80px;font-family: 'Sirin Stencil'; font-size: 50px; position: absolute; margin-top: 120px;border:0px solid yellow;width: 100vw;z-index:3">
+            <h2 style=" padding-top: 80px;font-family: 'Sirin Stencil'; font-size: 50px; position: absolute; margin-top: 90px;border:0px solid yellow;width: 100vw;z-index:3">
                 <span id='text'></span>
             </h2>
 
@@ -1087,6 +1151,11 @@
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
 </body>
+<!-- particlce js-->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- stats.js lib -->
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
 <script>
     window.sr = ScrollReveal();
     sr.reveal('.foo');
@@ -1253,6 +1322,118 @@
             }
         }, 400)
     }
+</script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 428,
+                "density": {
+                    "enable": true,
+                    "value_area": 7371.027056476482
+                }
+            },
+            "color": {
+                "value": "#402bde"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 10,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": false,
+                "distance": 500,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 2
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "bottom",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "bubble"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 0.5
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 4,
+                    "duration": 0.3,
+                    "opacity": 1,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
 </script>
 
 </html>
